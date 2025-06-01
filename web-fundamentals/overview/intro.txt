@@ -1,0 +1,3 @@
+Discussion Layout:
+Client (via devices) -> Frontend Server (User interaction space) -> Backend Server (Frontend helper) -> DataBase (User data storage primarily)
+        Laptop       ->             React                        ->         Express Js and Node Js   ->             MongoDB
