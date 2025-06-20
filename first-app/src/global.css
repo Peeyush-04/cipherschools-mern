@@ -1,0 +1,13 @@
+@import url(https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css);
+
+.center {
+    text-align: center;
+}
+
+.screen {
+    padding:3rem 4rem;
+}
+
+section {
+    padding: 2vh 0;
+}
