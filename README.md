@@ -3,7 +3,7 @@
 **This content is all about how I have implemented `Hybrid Full-Stack Web Developement Summer Traning Program Online`**
 
 ## Objective
-The main object of this implementation is to show, how I have learnt `React`, `MongoDb`, `Express` and `Node.js` via practically.  
+The main objective of this implementation is to show, how I have learnt `React`, `MongoDb`, `Express` and `Node.js` via practically.  
 There exists different branches for different tasks.  
 Some of them are:  
 1. [fundamentals](https://github.com/Peeyush-04/cipherschools-mern) (HTML, CSS and JavaScript)
