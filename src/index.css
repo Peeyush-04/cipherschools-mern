@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.weather-page {
+  text-align: center;
+}
+
+.btn {
+  border-radius: 5rem;
+}
