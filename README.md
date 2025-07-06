@@ -17,4 +17,4 @@ Some of them are:
 The insights that I have acquired from this program falls towards MERN stack.
 
 ## Undertaking
-All the execution done in this repository is under [CipherSchools](https://www.cipherschools.com/profile/me), by [Peeyush](https://github.com/Peeyush-04).
+All the execution done in this repository are under [CipherSchools](https://www.cipherschools.com/profile/me), by [Peeyush](https://github.com/Peeyush-04).
