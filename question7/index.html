@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Message</title>
+</head>
+<body>
+  <p id="message">Original message</p>
+  <button id="changeBtn">Change Message</button>
+
+  <script>
+    const button = document.getElementById("changeBtn");
+    const message = document.getElementById("message");
+
+    button.addEventListener("click", () => {
+      message.textContent = "🎉 The message has been changed!";
+    });
+  </script>
+</body>
+</html>

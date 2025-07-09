@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Person Class</title>
+</head>
+<body>
+
+  <h2>Create a Person</h2>
+
+  <label for="nameInput">Name:</label>
+  <input type="text" id="nameInput"><br><br>
+
+  <label for="ageInput">Age:</label>
+  <input type="number" id="ageInput"><br><br>
+
+  <button id="createBtn">Create Person</button>
+
+  <p id="output"></p>
+
+  <script>
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      sayHello() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+      }
+    }
+
+    const button = document.getElementById("createBtn");
+    const output = document.getElementById("output");
+
+    button.addEventListener("click", () => {
+      const name = document.getElementById("nameInput").value;
+      const age = parseInt(document.getElementById("ageInput").value);
+
+      if (name && !isNaN(age)) {
+        const person = new Person(name, age);
+        output.textContent = person.sayHello();
+      } else {
+        output.textContent = "Please enter a valid name and age.";
+      }
+    });
+  </script>
+
+</body>
+</html>

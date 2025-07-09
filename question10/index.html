@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add & Remove List Items</title>
+</head>
+<body>
+
+  <ul id="myList">
+    <li>Item 1</li>
+  </ul>
+
+  <button id="addButton">Add Item</button>
+  <button id="removeButton">Remove Last Item</button>
+
+  <script>
+    const list = document.getElementById("myList");
+    const addButton = document.getElementById("addButton");
+    const removeButton = document.getElementById("removeButton");
+
+    let count = 2;
+
+    addButton.addEventListener("click", () => {
+      const newItem = document.createElement("li");
+      newItem.textContent = `Item ${count++}`;
+      list.appendChild(newItem);
+    });
+
+    removeButton.addEventListener("click", () => {
+      if (list.lastChild) {
+        list.removeChild(list.lastChild);
+        count--;
+      }
+    });
+  </script>
+
+</body>
+</html>

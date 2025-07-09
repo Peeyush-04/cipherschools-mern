@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Input Text</title>
+</head>
+<body>
+
+  <input type="text" id="userInput" placeholder="Type something...">
+  <button id="showButton">Show Text</button>
+
+  <p id="displayText">Your text will appear here.</p>
+
+  <script>
+    const input = document.getElementById("userInput");
+    const button = document.getElementById("showButton");
+    const display = document.getElementById("displayText");
+
+    button.addEventListener("click", () => {
+      const text = input.value.trim();
+      if (text !== "") {
+        display.textContent = text;
+      } else {
+        display.textContent = "Please enter something!";
+      }
+    });
+  </script>
+
+</body>
+</html>

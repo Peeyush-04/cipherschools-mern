@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessible & Responsive Person Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #output {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+    }
+
+    .banner {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      input, button {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 900px) {
+      .container {
+        max-width: 90%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="./welcome.jpg" alt="Welcome banner with text 'Create a Person'" class="banner" />
+
+  <div class="container" role="form" aria-label="Person creation form">
+    <h2>Create a Person</h2>
+
+    <div class="form-group">
+      <label for="nameInput">Name:</label>
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+    </div>
+
+    <div class="form-group">
+      <label for="ageInput">Age:</label>
+      <input type="number" id="ageInput" placeholder="Enter your age" />
+    </div>
+
+    <button id="createBtn">Create Person</button>
+
+    <p id="output">Your greeting will appear here.</p>
+  </div>
+
+  <script>
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      sayHello() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+      }
+    }
+
+    const button = document.getElementById("createBtn");
+    const output = document.getElementById("output");
+
+    button.addEventListener("click", () => {
+      const name = document.getElementById("nameInput").value.trim();
+      const age = parseInt(document.getElementById("ageInput").value);
+
+      if (name && !isNaN(age)) {
+        const person = new Person(name, age);
+        output.textContent = person.sayHello();
+      } else {
+        output.textContent = "Please enter a valid name and age.";
+      }
+    });
+  </script>
+
+</body>
+</html>

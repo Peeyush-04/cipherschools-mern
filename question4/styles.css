@@ -1,0 +1,13 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40%;
+  max-width: 20%;
+  margin-top: 8rem;
+  padding: 4rem 2rem;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 4rem;
+}
